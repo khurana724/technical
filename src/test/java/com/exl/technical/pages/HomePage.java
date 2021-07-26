@@ -17,7 +17,7 @@ public class HomePage extends Page {
 	String pageUrl = "https://www.google.com/maps/";
 
 	protected By searchTextBoxBy = By.id("searchboxinput");
-	protected By searchSuggestionsBy = By.cssSelector("div.suggestions div.suggest-left-cell");
+	protected By searchSuggestionsBy = By.cssSelector("div.suggestions div.suggest");
 	protected By selectedSearchHeaderTitleBy = By.className("section-hero-header-title-title");
 	protected By directionsButtonBy = By.cssSelector("div[data-value='Directions'] button.section-action-chip-button");
 	protected By startingPointInDirectionsBy = By
@@ -28,7 +28,7 @@ public class HomePage extends Page {
 	@CacheLookup
 	protected WebElement searchTextBox;
 
-	@FindBy(how = How.CSS, using = "div.suggestions div.suggest-left-cell")
+	@FindBy(how = How.CSS, using = "div.suggestions div.suggest")
 	protected List<WebElement> searchSuggestionsList;
 
 	@FindBy(how = How.CSS, using = "div[data-value='Directions'] button.section-action-chip-button")
